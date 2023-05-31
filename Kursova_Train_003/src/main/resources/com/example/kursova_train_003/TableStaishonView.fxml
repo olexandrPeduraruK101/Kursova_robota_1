@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="830.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kursova_train_003.TableStaishonView_Controller">
+    <children>
+        <TableView fx:id="table" layoutX="281.0" layoutY="97.0" prefHeight="330.0" prefWidth="563.0">
+            <columns>
+                <TableColumn fx:id="colid" prefWidth="82.0" text="id" />
+                <TableColumn fx:id="colname_staishon" prefWidth="480.0" text="назва_станції" />
+            </columns>
+        </TableView>
+        <TabPane layoutX="96.0" layoutY="491.0" prefHeight="307.0" prefWidth="1044.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Додавання">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #c0c2c1;">
+                     <children>
+                        <Label layoutX="260.0" layoutY="77.0" text="назва_станції" />
+                        <TextField fx:id="tPlus0" layoutX="70.0" layoutY="94.0" prefHeight="25.0" prefWidth="263.0" />
+                        <Button layoutX="457.0" layoutY="94.0" mnemonicParsing="false" onAction="#btnPlus0A" prefHeight="26.0" prefWidth="170.0" text="додати станцію" />
+                        <Label fx:id="warningPlus0" layoutX="70.0" layoutY="131.0" prefHeight="17.0" prefWidth="262.0" />
+                     </children></AnchorPane>
+                    </content>
+                </Tab>
+            <Tab text="Видаляння">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #c0c2c1;">
+                     <children>
+                        <Label layoutX="138.0" layoutY="56.0" text="видалити по id" />
+                        <TextField fx:id="tDelete0" layoutX="107.0" layoutY="73.0" prefHeight="25.0" prefWidth="113.0" />
+                        <Button layoutX="369.0" layoutY="73.0" mnemonicParsing="false" onAction="#btnDelete0A" text="видалити" />
+                        <Label fx:id="warningDelete0" layoutX="54.0" layoutY="98.0" prefHeight="17.0" prefWidth="243.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="пошук">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #c0c2c1;">
+                     <children>
+                        <Button layoutX="348.0" layoutY="114.0" mnemonicParsing="false" onAction="#btnPoshuk0A" prefHeight="19.0" prefWidth="59.0" text="Пошук" />
+                        <TextField fx:id="tPosuk0" layoutX="118.0" layoutY="114.0" />
+                        <Label layoutX="201.0" layoutY="91.0" text="пошук по id" />
+                        <Label fx:id="warningPoshuk0" layoutX="102.0" layoutY="151.0" prefHeight="17.0" prefWidth="181.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            </tabs>
+        </TabPane>
+      <Button layoutX="941.0" layoutY="105.0" mnemonicParsing="false" onAction="#btnUpdate0A" prefHeight="25.0" prefWidth="103.0" text="оновити данні" />
+    </children>
+</AnchorPane>

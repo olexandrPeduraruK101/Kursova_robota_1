@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="849.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+  <tabs>
+    <Tab text="Потяги">
+      <content>
+        <fx:include source="TableTrainView.fxml" />
+      </content>
+    </Tab>
+    <Tab text="Місця">
+      <content>
+        <fx:include source="TableSeatView.fxml" />
+      </content>
+    </Tab>
+    <Tab text="Станції">
+      <content>
+        <fx:include source="TableStaishonView.fxml" />
+      </content>
+    </Tab>
+    <Tab text="Маршут">
+      <content>
+        <fx:include source="TableStaishonDistanceView.fxml" />
+      </content>
+    </Tab>
+    <Tab text="Користувачі">
+      <content>
+        <fx:include source="TableUsersView.fxml" />
+      </content>
+    </Tab>
+    <Tab text="Квитки">
+      <content>
+        <fx:include source="TableTicketsView.fxml" />
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

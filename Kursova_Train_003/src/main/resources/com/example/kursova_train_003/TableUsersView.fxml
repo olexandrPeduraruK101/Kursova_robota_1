@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="830.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kursova_train_003.TableUsersView_Controller">
+   <children>
+      <TabPane layoutX="25.0" layoutY="558.0" prefHeight="249.0" prefWidth="1062.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Редагування">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="197.0" prefWidth="1028.0" style="-fx-background-color: #c0c2c1;">
+                     <children>
+                        <TextField fx:id="tRedag0" layoutX="98.0" layoutY="85.0" prefHeight="25.0" prefWidth="86.0" />
+                        <Label layoutX="174.0" layoutY="68.0" text="id" />
+                        <TextField fx:id="tRedag1" layoutX="281.0" layoutY="86.0" prefHeight="25.0" prefWidth="86.0" />
+                        <Label layoutX="346.0" layoutY="68.0" text="Ім'я" />
+                        <TextField fx:id="tRedag2" layoutX="461.0" layoutY="86.0" prefHeight="25.0" prefWidth="86.0" />
+                        <Label layoutX="493.0" layoutY="68.0" text="Призвіще" />
+                        <TextField fx:id="tRedag3" layoutX="622.0" layoutY="86.0" prefHeight="25.0" prefWidth="86.0" />
+                        <Label layoutX="641.0" layoutY="68.0" text="По-Батькові" />
+                        <Button layoutX="780.0" layoutY="86.0" mnemonicParsing="false" onAction="#btnRedug0" text="Редагувати" />
+                        <Label fx:id="warningRedag" layoutX="98.0" layoutY="163.0" prefHeight="17.0" prefWidth="546.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Видалення">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #c0c2c1;">
+                     <children>
+                        <TextField fx:id="tDelete" layoutX="74.0" layoutY="73.0" prefHeight="25.0" prefWidth="105.0" />
+                        <Label layoutX="169.0" layoutY="56.0" text="id" />
+                        <Button layoutX="284.0" layoutY="73.0" mnemonicParsing="false" onAction="#btnDeleteA" text="Видалити" />
+                        <Label fx:id="warningDelete" layoutX="74.0" layoutY="140.0" prefHeight="17.0" prefWidth="279.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Пошук">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #c0c2c1;">
+                     <children>
+                        <TextField fx:id="tPoshuk0" layoutX="72.0" layoutY="54.0" prefHeight="25.0" prefWidth="106.0" />
+                        <Button layoutX="72.0" layoutY="110.0" mnemonicParsing="false" onAction="#btnPoshuk0A" prefHeight="25.0" prefWidth="107.0" text="пошук" />
+                        <Label layoutX="149.0" layoutY="37.0" text="Логін" />
+                        <Label fx:id="warningPoshuk" layoutX="72.0" layoutY="189.0" prefHeight="17.0" prefWidth="348.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <TableView fx:id="table" layoutX="115.0" layoutY="65.0" onMouseClicked="#getData" prefHeight="444.0" prefWidth="934.0">
+        <columns>
+          <TableColumn fx:id="colid" prefWidth="57.0" text="id" />
+          <TableColumn fx:id="colLogin" prefWidth="93.0" text="Логін" />
+            <TableColumn fx:id="colPassword" prefWidth="113.0" text="Пароль" />
+            <TableColumn fx:id="colFirstName" prefWidth="85.0" text="Ім'я" />
+            <TableColumn fx:id="colLastName" prefWidth="113.0" text="Призвіще" />
+            <TableColumn fx:id="colFatherName" prefWidth="158.0" text="По-Батькові" />
+            <TableColumn fx:id="colnumberphone" prefWidth="197.0" text="Телефон" />
+            <TableColumn fx:id="colstatus" prefWidth="117.0" text="Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="1065.0" layoutY="121.0" mnemonicParsing="false" onAction="#btnUpdate" text="оновити таблицю" />
+   </children>
+</AnchorPane>

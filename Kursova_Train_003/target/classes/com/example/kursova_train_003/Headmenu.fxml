@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kursova_train_003.Headmenu_Controller">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Pane prefHeight="200.0" prefWidth="200.0" stylesheets="@style_ss.css">
+            <children>
+                <Button fx:id="btnHRegister" layoutX="110.0" layoutY="519.0" mnemonicParsing="false" onAction="#btnHRegisterA" prefHeight="34.0" prefWidth="187.0" styleClass="button-b" stylesheets="@style_ss.css" text="Реєстарція">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="btnHAutorization" disable="true" layoutX="109.0" layoutY="470.0" mnemonicParsing="false" onAction="#btnHAutorizationA" prefHeight="34.0" prefWidth="187.0" styleClass="button-b" stylesheets="@style_ss.css" text="Авторизація">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Pane layoutX="8.0" layoutY="20.0" prefHeight="372.0" prefWidth="390.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+                    <effect>
+                        <InnerShadow />
+                    </effect>
+                    <children>
+                        <Label layoutX="94.0" layoutY="198.0" text="Вас вітає компанія Санька ">
+                            <font>
+                                <Font name="Times New Roman" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="74.0" layoutY="227.0" prefHeight="20.0" prefWidth="242.0" text="Найдешевші білети на поїздки ">
+                            <font>
+                                <Font name="Times New Roman" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="78.0" layoutY="14.0" text="TrainTrips">
+                            <font>
+                                <Font name="Times New Roman Bold" size="49.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+            </children>
+        </Pane>
+        <Pane fx:id="pane_register" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="1">
+            <children>
+                <Pane layoutX="19.0" layoutY="14.0" prefHeight="42.0" prefWidth="369.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+                    <effect>
+                        <InnerShadow />
+                    </effect>
+                    <children>
+                        <Label layoutX="102.0" layoutY="3.0" text="Авторизація">
+                            <font>
+                                <Font name="Times New Roman Bold" size="29.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+                <Pane layoutX="18.0" layoutY="148.0" prefHeight="264.0" prefWidth="369.0" style="-fx-background-color: white;">
+                    <children>
+                        <Label layoutX="35.0" layoutY="40.0" text="Логін">
+                            <font>
+                                <Font name="Times New Roman" size="18.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="tALogin" layoutX="35.0" layoutY="66.0" prefHeight="25.0" prefWidth="300.0" styleClass="text-field" stylesheets="@style_ss.css" />
+                        <Label layoutX="35.0" layoutY="120.0" text="Пароль">
+                            <font>
+                                <Font name="Times New Roman" size="18.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="tApassword" layoutX="35.0" layoutY="146.0" prefHeight="25.0" prefWidth="300.0" styleClass="text-field" stylesheets="@style_ss.css" />
+                        <Label fx:id="tLAWarning" alignment="CENTER" layoutX="11.0" layoutY="196.0" prefHeight="20.0" prefWidth="349.0" text="*Не вірно введений пароль чи логін" textFill="#e81010" visible="false">
+                            <font>
+                                <Font name="Times New Roman" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <effect>
+                        <InnerShadow />
+                    </effect>
+                </Pane>
+                <Button fx:id="btnALog_into" layoutX="100.0" layoutY="435.0" mnemonicParsing="false" onAction="#btnALog_intoA" prefHeight="34.0" prefWidth="208.0" styleClass="button-confirm" stylesheets="@style_ss.css" text="Увійти">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+            </children>
+            <cursor>
+                <Cursor fx:constant="DEFAULT" />
+            </cursor>
+            <effect>
+                <DropShadow />
+            </effect>
+        </Pane>
+        <Pane fx:id="pane_create" prefHeight="682.0" prefWidth="405.0" style="-fx-background-color: white;" visible="false" GridPane.columnIndex="1">
+            <cursor>
+                <Cursor fx:constant="DEFAULT" />
+            </cursor>
+            <effect>
+                <DropShadow />
+            </effect>
+            <children>
+                <Pane layoutX="18.0" layoutY="14.0" prefHeight="42.0" prefWidth="369.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+                    <effect>
+                        <InnerShadow />
+                    </effect>
+                    <children>
+                        <Label layoutX="56.0" layoutY="5.0" text="Створення акаунту">
+                            <font>
+                                <Font name="Times New Roman Bold" size="29.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+                <Pane layoutX="18.0" layoutY="81.0" prefHeight="416.0" prefWidth="369.0" style="-fx-background-color: white;">
+                    <children>
+                        <Label layoutX="35.0" layoutY="221.0" text="По-Батькові">
+                            <font>
+                                <Font name="Times New Roman" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="35.0" layoutY="6.0" text="Логін">
+                            <font>
+                                <Font name="Times New Roman" size="18.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="tRLogin" layoutX="35.0" layoutY="29.0" prefHeight="0.0" prefWidth="300.0" styleClass="text-field" stylesheets="@style_ss.css">
+                            <font>
+                                <Font size="10.0" />
+                            </font></TextField>
+                        <Label layoutX="35.0" layoutY="62.0" text="Пароль">
+                            <font>
+                                <Font name="Times New Roman" size="18.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="tRPassword" layoutX="35.0" layoutY="84.0" prefHeight="25.0" prefWidth="300.0" styleClass="text-field" stylesheets="@style_ss.css" />
+                        <Label layoutX="35.0" layoutY="116.0" text="Ім'я">
+                            <font>
+                                <Font name="Times New Roman" size="18.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="tRFirstName" layoutX="35.0" layoutY="135.0" prefHeight="25.0" prefWidth="300.0" styleClass="text-field" stylesheets="@style_ss.css" />
+                        <Label layoutX="35.0" layoutY="169.0" prefHeight="20.0" prefWidth="69.0" text="Фамілія">
+                            <font>
+                                <Font name="Times New Roman" size="18.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="tRLastName" layoutX="35.0" layoutY="190.0" prefHeight="25.0" prefWidth="300.0" styleClass="text-field" stylesheets="@style_ss.css" />
+                        <Label layoutX="35.0" layoutY="279.0" text="Телефон">
+                            <font>
+                                <Font name="Times New Roman" size="18.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="tRFatherName" layoutX="35.0" layoutY="244.0" prefHeight="25.0" prefWidth="300.0" styleClass="text-field" stylesheets="@style_ss.css" />
+                        <TextField fx:id="tRNuberPhone" layoutX="35.0" layoutY="302.0" prefHeight="31.0" prefWidth="300.0" styleClass="text-field" stylesheets="@style_ss.css" />
+                        <Label fx:id="tRWarning" layoutX="35.0" layoutY="342.0" prefHeight="20.0" prefWidth="300.0" text="*Ви якесь поле залишили порожнім будь ласка заповніть його" textFill="#e40b0b" visible="false">
+                            <font>
+                                <Font name="Times New Roman" size="11.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <effect>
+                        <InnerShadow />
+                    </effect>
+                </Pane>
+                <Button fx:id="btnRCreate_acc" layoutX="99.0" layoutY="519.0" mnemonicParsing="false" onAction="#btnRCreate_accA" prefHeight="34.0" prefWidth="208.0" styleClass="button-confirm" stylesheets="@style_ss.css" text="Створити акаунт">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+            </children>
+        </Pane>
+    </children>
+</GridPane>

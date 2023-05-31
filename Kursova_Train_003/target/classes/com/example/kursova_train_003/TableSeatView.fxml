@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="830.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kursova_train_003.TableSeatView_Controller">
+    <children>
+        <TableView fx:id="table" layoutX="316.0" layoutY="52.0" onMouseClicked="#getData" prefHeight="435.0" prefWidth="568.0">
+            <columns>
+                <TableColumn fx:id="colid" prefWidth="67.0" text="id" />
+                <TableColumn fx:id="coltrain_id" prefWidth="205.0" text=" id потяга" />
+                <TableColumn fx:id="colseat_number" prefWidth="127.0" text="номер місця" />
+                <TableColumn fx:id="colbooked" prefWidth="168.0" text="заняті true  чи вільні false" />
+            </columns>
+        </TableView>
+        <TabPane layoutX="71.0" layoutY="543.0" prefHeight="239.0" prefWidth="1074.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Редагуванния місця">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="210.0" prefWidth="756.0" style="-fx-background-color: #c0c2c1;">
+                            <children>
+                                <ComboBox fx:id="cmbUpdate0" layoutX="455.0" layoutY="60.0" prefHeight="25.0" prefWidth="70.0" />
+                                <Label layoutX="87.0" layoutY="35.0" text="редагувати по id" />
+                                <Label layoutX="388.0" layoutY="35.0" text="замовлене (true)/ вільне місце (false)" />
+                                <Button layoutX="609.0" layoutY="44.0" mnemonicParsing="false" onAction="#btnUpdate0A" prefHeight="106.0" prefWidth="154.0" text="редагувати" />
+                        <TextField fx:id="tUpdate0" layoutX="70.0" layoutY="60.0" prefHeight="25.0" prefWidth="114.0" />
+                        <Label fx:id="warning_update0" layoutX="70.0" layoutY="97.0" prefHeight="17.0" prefWidth="114.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="видаляння місця">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #c0c2c1;">
+                            <children>
+                                <Label layoutX="103.0" layoutY="40.0" text="видалати по id" />
+                                <Button layoutX="245.0" layoutY="64.0" mnemonicParsing="false" onAction="#btnDelete0A" prefHeight="78.0" prefWidth="124.0" text="видалити" />
+                        <Label layoutX="563.0" layoutY="24.0" prefHeight="17.0" prefWidth="135.0" text="видалати всі записи які " />
+                        <Label layoutX="577.0" layoutY="41.0" prefHeight="17.0" prefWidth="114.0" text="зв'язанні з  id потяга" />
+                        <Button layoutX="751.0" layoutY="58.0" mnemonicParsing="false" onAction="#btnDelete1A" prefHeight="78.0" prefWidth="124.0" text="видалити" />
+                        <TextField fx:id="tDelete0" layoutX="100.0" layoutY="64.0" prefHeight="25.0" prefWidth="92.0" />
+                        <TextField fx:id="tDelete1" layoutX="561.0" layoutY="64.0" prefHeight="25.0" prefWidth="130.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            <Tab text="пошук">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #c0c2c1;">
+                     <children>
+                        <Label layoutX="162.0" layoutY="46.0" text="id" />
+                        <TextField fx:id="tPoshuk0" layoutX="94.0" layoutY="63.0" prefHeight="25.0" prefWidth="78.0" />
+                        <Button layoutX="94.0" layoutY="112.0" mnemonicParsing="false" onAction="#btnPoshuk0A" prefHeight="25.0" prefWidth="75.0" text="пошук" />
+                        <Label layoutX="304.0" layoutY="41.0" text="id потяга" />
+                        <TextField fx:id="tPoshuk1" layoutX="275.0" layoutY="60.0" prefHeight="25.0" prefWidth="78.0" />
+                        <Button layoutX="275.0" layoutY="109.0" mnemonicParsing="false" onAction="#btnPoshuk1A" prefHeight="25.0" prefWidth="75.0" text="пошук" />
+                        <Label layoutX="492.0" layoutY="41.0" text="номер місця" />
+                        <TextField fx:id="tPoshuk2" layoutX="488.0" layoutY="58.0" prefHeight="25.0" prefWidth="78.0" />
+                        <Button layoutX="488.0" layoutY="107.0" mnemonicParsing="false" onAction="#btnPoshuk2A" prefHeight="25.0" prefWidth="75.0" text="пошук" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            </tabs>
+        </TabPane>
+      <Button fx:id="btnupdatae_table" layoutX="998.0" layoutY="76.0" mnemonicParsing="false" onAction="#btnupdatae_tableA" text="оновити таблицю" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="830.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kursova_train_003.TableTicketsView_Controller">
+   <children>
+      <TableView fx:id="table" layoutX="6.0" layoutY="37.0" prefHeight="447.0" prefWidth="1167.0">
+        <columns>
+          <TableColumn fx:id="colid" prefWidth="75.0" text="id" />
+            <TableColumn fx:id="coltrain_id" prefWidth="75.0" text="id потяга" />
+            <TableColumn fx:id="colnumber_train" text=" номер потяга" />
+            <TableColumn fx:id="colseat_id" prefWidth="70.0" text="id місця" />
+            <TableColumn fx:id="colseat_number" prefWidth="75.0" text="номер місця" />
+            <TableColumn fx:id="coldepartureStationName" prefWidth="75.0" text="станція відбуття " />
+            <TableColumn fx:id="colarrivalStationName" prefWidth="75.0" text="станція прибуття" />
+            <TableColumn fx:id="coldeparture_date" prefWidth="75.0" text="дата відбуття" />
+            <TableColumn fx:id="coldeparture_time" prefWidth="75.0" text="час відбуття" />
+            <TableColumn fx:id="colarrival_date" prefWidth="75.0" text="дата прибуття" />
+            <TableColumn fx:id="colarrival_time" prefWidth="75.0" text="час відбуття" />
+            <TableColumn fx:id="collogin" prefWidth="75.0" text="логін" />
+            <TableColumn fx:id="collastname" prefWidth="75.0" text="призвіще" />
+            <TableColumn fx:id="colfirstname" minWidth="0.0" prefWidth="92.0" text="ім'я" />
+            <TableColumn fx:id="colprice" prefWidth="98.0" text="ціна" />
+        </columns>
+      </TableView>
+      <TabPane layoutX="37.0" layoutY="538.0" prefHeight="261.0" prefWidth="1126.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="видалити">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #c0c2c1;">
+                     <children>
+                        <Label layoutX="183.0" layoutY="54.0" text="id" />
+                        <TextField fx:id="tDelete" layoutX="73.0" layoutY="71.0" prefHeight="25.0" prefWidth="120.0" />
+                        <Button layoutX="327.0" layoutY="71.0" mnemonicParsing="false" onAction="#btnDeleteA" prefHeight="25.0" prefWidth="84.0" text="видалити" />
+                        <Label fx:id="warningdelete" layoutX="63.0" layoutY="192.0" prefHeight="17.0" prefWidth="454.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

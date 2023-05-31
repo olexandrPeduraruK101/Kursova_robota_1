@@ -1,0 +1,63 @@
+.button-confirm {
+    -fx-background-color: #28a745;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 5px 10px;
+    -fx-border-radius: 5;
+    -fx-text-transform: uppercase;
+    -fx-letter-spacing: 2px;
+}
+
+.button-confirm:hover, .button-confirm:pressed {
+    -fx-background-color: #218838;
+    -fx-border-color: #1e7e34;
+    -fx-border-radius: 5;
+    -fx-text-fill: white;
+    -fx-text-decoration: none;
+}
+
+.button-b {
+    -fx-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -fx-font-size: 14px;
+    -fx-font-weight: 400;
+    -fx-text-fill: #fff;
+    -fx-background-color: #337ab7;
+    -fx-background-radius: 4px;
+    -fx-padding: 6px 12px;
+    -fx-border-radius: 4px;
+    -fx-border-width: 1px;
+    -fx-border-color: #2e6da4;
+}
+
+.button-b:hover {
+    -fx-background-color: #286090;
+    -fx-border-color: #204d74;
+}
+
+.button-b:pressed, .button:default:hover:pressed {
+    -fx-background-color: #204d74;
+    -fx-border-color: #122b40;
+}
+
+.text-field {
+    -fx-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -fx-font-size: 12px;
+    -fx-padding: 6px 12px;
+    -fx-background-color: #fff;
+    -fx-border-radius: 4px;
+    -fx-border-width: 1px;
+    -fx-border-color: grey;
+}
+
+.text-field:focus {
+    -fx-border-color: #black;
+    -fx-box-shadow: 0px 0px 5px #66afe9;
+}
+
+.text-field:disabled {
+    -fx-opacity: 0.65;
+}
+
+.text-field:hover {
+    -fx-border-color: black;
+}
